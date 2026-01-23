@@ -1,0 +1,17 @@
+name: CropGuard
+version: '1.0.0'
+main: com.cropguard.CropGuard
+api-version: '1.16'
+authors: ['wp:1']
+description: '保护农作物不被玩家踩踏破坏的插件'
+commands:
+    cropguard:
+        description: '重载插件配置'
+        aliases: ['cg']
+permissions:
+    cropguard.reload:
+        description: '允许重载插件配置'
+        default: false
+    cropguard.bypass:
+        description: '允许绕过农作物保护'
+        default: false

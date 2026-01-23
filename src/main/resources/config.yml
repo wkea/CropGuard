@@ -1,0 +1,28 @@
+# 农作物防踩踏插件配置
+# 版本: 1.0.0
+
+# 受保护的农作物列表
+# 支持的作物类型: WHEAT, CARROTS, POTATOES, BEETROOTS, MELON_STEM, PUMPKIN_STEM, COCOA, NETHER_WART
+protected-crops:
+  - "WHEAT"          # 小麦
+  - "CARROTS"        # 胡萝卜
+  - "POTATOES"       # 马铃薯
+  - "BEETROOTS"      # 甜菜根
+
+# 生效世界列表
+# 留空表示所有世界都生效
+# 示例: ["world", "world_nether", "world_the_end"]
+enabled-worlds: []
+
+# 是否启用提示消息
+enable-messages: true
+
+# 绕过权限节点
+bypass-permission: "cropguard.bypass"
+
+# 消息配置
+messages:
+  protection: "§a农作物受到保护，无法踩踏！"
+  warning: "§c小心脚下！这里有受保护的农作物。"
+  no-permission: "§c你没有权限执行此命令！"
+  reload-success: "§a配置已重载！"
