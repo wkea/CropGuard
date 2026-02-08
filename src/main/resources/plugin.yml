@@ -1,17 +1,17 @@
-name: CropGuard
+name: PlayerStatsMenu
 version: '1.0.0'
-main: com.cropguard.CropGuard
+main: io.Sriptirc_wp_1.playerstatsmenu.Playerstatsmenu
 api-version: '1.16'
 authors: ['wp:1']
-description: '保护农作物不被玩家踩踏破坏的插件'
+description: '一个查看玩家血量、护甲、移动速度等状态信息的菜单插件'
 commands:
-    cropguard:
-        description: '重载插件配置'
-        aliases: ['cg']
+    stats:
+        description: '打开玩家状态信息菜单'
+        aliases: ['mystats', 'psm']
 permissions:
-    cropguard.reload:
-        description: '允许重载插件配置'
-        default: false
-    cropguard.bypass:
-        description: '允许绕过农作物保护'
-        default: false
+    playerstatsmenu.use:
+        description: '使用玩家状态菜单插件'
+        default: true
+    playerstatsmenu.admin:
+        description: '管理玩家状态菜单插件'
+        default: op

@@ -1,28 +1,73 @@
-# 农作物防踩踏插件配置
+# PlayerStatsMenu 配置文件
 # 版本: 1.0.0
 
-# 受保护的农作物列表
-# 支持的作物类型: WHEAT, CARROTS, POTATOES, BEETROOTS, MELON_STEM, PUMPKIN_STEM, COCOA, NETHER_WART
-protected-crops:
-  - "WHEAT"          # 小麦
-  - "CARROTS"        # 胡萝卜
-  - "POTATOES"       # 马铃薯
-  - "BEETROOTS"      # 甜菜根
+# GUI设置
+gui:
+  title: "&6玩家状态信息"
+  rows: 4
 
-# 生效世界列表
-# 留空表示所有世界都生效
-# 示例: ["world", "world_nether", "world_the_end"]
-enabled-worlds: []
+# 物品显示设置
+items:
+  health:
+    material: "RED_STAINED_GLASS_PANE"
+    displayname: "&c❤ 血量"
+  armor:
+    material: "IRON_CHESTPLATE"
+    displayname: "&b🛡 护甲"
+  speed:
+    material: "FEATHER"
+    displayname: "&a⚡ 移动速度"
+  hunger:
+    material: "COOKED_BEEF"
+    displayname: "&e🍖 饥饿值"
+  exp:
+    material: "EXPERIENCE_BOTTLE"
+    displayname: "&d✨ 经验等级"
+  gamemode:
+    material: "GRASS_BLOCK"
+    displayname: "&2🌍 游戏模式"
+  playtime:
+    material: "CLOCK"
+    displayname: "&6⏰ 在线时间"
+  world:
+    material: "COMPASS"
+    displayname: "&9🧭 当前世界"
+  refresh:
+    material: "EMERALD"
+    displayname: "&a🔄 刷新信息"
+  close:
+    material: "BARRIER"
+    displayname: "&c✖ 关闭菜单"
+  help:
+    material: "BOOK"
+    displayname: "&e📖 帮助信息"
 
-# 是否启用提示消息
-enable-messages: true
+# 功能设置
+features:
+  command:
+    enabled: true
+  item:
+    enabled: true
+    material: "COMPASS"
+    displayname: "&6玩家状态查看器"
+    lore: "&7右键打开状态菜单"
 
-# 绕过权限节点
-bypass-permission: "cropguard.bypass"
-
-# 消息配置
+# 消息设置
 messages:
-  protection: "§a农作物受到保护，无法踩踏！"
-  warning: "§c小心脚下！这里有受保护的农作物。"
-  no-permission: "§c你没有权限执行此命令！"
-  reload-success: "§a配置已重载！"
+  no-permission: "&c你没有权限使用此功能！"
+  only-player: "&c只有玩家才能使用此命令！"
+  menu-opened: "&a已打开状态信息菜单"
+  info-refreshed: "&a信息已刷新"
+  item-given: "&a你获得了状态查看器！"
+  item-already-have: "&c你已经有状态查看器了！"
+
+# 高级设置
+advanced:
+  # 是否启用详细点击信息
+  detailed-click-info: true
+  # 自动刷新间隔（秒，0为禁用）
+  auto-refresh-interval: 0
+  # 是否在玩家加入时给予物品
+  give-on-join: false
+  # 是否记录使用日志
+  log-usage: false
