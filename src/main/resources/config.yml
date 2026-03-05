@@ -1,73 +1,22 @@
-# PlayerStatsMenu 配置文件
-# 版本: 1.0.0
+# NoPhantom 配置文件
+# ScriptIrc 配置版本 - 每次修改配置结构时请更新此值
+ScriptIrc-config-version: 1
 
-# GUI设置
-gui:
-  title: "&6玩家状态信息"
-  rows: 4
+# 全局设置
+global-enabled: true  # 是否全局启用幻翼生成限制
+send-warning: true    # 是否在阻止幻翼生成时发送警告消息
+warning-message: "&c幻翼生成已被阻止！"  # 警告消息（支持颜色代码 &）
 
-# 物品显示设置
-items:
-  health:
-    material: "RED_STAINED_GLASS_PANE"
-    displayname: "&c❤ 血量"
-  armor:
-    material: "IRON_CHESTPLATE"
-    displayname: "&b🛡 护甲"
-  speed:
-    material: "FEATHER"
-    displayname: "&a⚡ 移动速度"
-  hunger:
-    material: "COOKED_BEEF"
-    displayname: "&e🍖 饥饿值"
-  exp:
-    material: "EXPERIENCE_BOTTLE"
-    displayname: "&d✨ 经验等级"
-  gamemode:
-    material: "GRASS_BLOCK"
-    displayname: "&2🌍 游戏模式"
-  playtime:
-    material: "CLOCK"
-    displayname: "&6⏰ 在线时间"
-  world:
-    material: "COMPASS"
-    displayname: "&9🧭 当前世界"
-  refresh:
-    material: "EMERALD"
-    displayname: "&a🔄 刷新信息"
-  close:
-    material: "BARRIER"
-    displayname: "&c✖ 关闭菜单"
-  help:
-    material: "BOOK"
-    displayname: "&e📖 帮助信息"
+# 世界特定设置
+# 格式: 世界名: true/false
+# true = 允许幻翼生成，false = 禁止幻翼生成
+worlds:
+  world: false        # 主世界禁止幻翼
+  world_nether: true  # 下界允许幻翼
+  world_the_end: true # 末地允许幻翼
 
-# 功能设置
-features:
-  command:
-    enabled: true
-  item:
-    enabled: true
-    material: "COMPASS"
-    displayname: "&6玩家状态查看器"
-    lore: "&7右键打开状态菜单"
-
-# 消息设置
-messages:
-  no-permission: "&c你没有权限使用此功能！"
-  only-player: "&c只有玩家才能使用此命令！"
-  menu-opened: "&a已打开状态信息菜单"
-  info-refreshed: "&a信息已刷新"
-  item-given: "&a你获得了状态查看器！"
-  item-already-have: "&c你已经有状态查看器了！"
-
-# 高级设置
-advanced:
-  # 是否启用详细点击信息
-  detailed-click-info: true
-  # 自动刷新间隔（秒，0为禁用）
-  auto-refresh-interval: 0
-  # 是否在玩家加入时给予物品
-  give-on-join: false
-  # 是否记录使用日志
-  log-usage: false
+# 绕过玩家列表
+# 这些玩家不受幻翼生成限制影响
+bypass-players:
+  # - "Notch"
+  # - "Herobrine"
